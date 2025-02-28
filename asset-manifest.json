@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Bank-react/static/css/main.9fe40f7c.css",
-    "main.js": "/Bank-react/static/js/main.aeaac66a.js",
-    "static/js/488.9c92ff38.chunk.js": "/Bank-react/static/js/488.9c92ff38.chunk.js",
-    "index.html": "/Bank-react/index.html",
-    "main.9fe40f7c.css.map": "/Bank-react/static/css/main.9fe40f7c.css.map",
-    "main.aeaac66a.js.map": "/Bank-react/static/js/main.aeaac66a.js.map",
-    "488.9c92ff38.chunk.js.map": "/Bank-react/static/js/488.9c92ff38.chunk.js.map"
+    "main.css": "/bank-react/static/css/main.9fe40f7c.css",
+    "main.js": "/bank-react/static/js/main.9a7d8cab.js",
+    "static/js/488.9c92ff38.chunk.js": "/bank-react/static/js/488.9c92ff38.chunk.js",
+    "index.html": "/bank-react/index.html",
+    "main.9fe40f7c.css.map": "/bank-react/static/css/main.9fe40f7c.css.map",
+    "main.9a7d8cab.js.map": "/bank-react/static/js/main.9a7d8cab.js.map",
+    "488.9c92ff38.chunk.js.map": "/bank-react/static/js/488.9c92ff38.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9fe40f7c.css",
-    "static/js/main.aeaac66a.js"
+    "static/js/main.9a7d8cab.js"
   ]
 }
