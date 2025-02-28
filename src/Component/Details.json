@@ -1,0 +1,29 @@
+{
+    "Details":[
+        {
+            "Name":"Ram",
+            "accountNo":110001,
+            "userId":"Ram.01",
+            "password":"1001",
+            "initialAmount":1000,
+            "IsLogin":false,
+            "transactionHistory":[]
+        },{
+            "Name":"Raj",
+            "accountNo":110002,
+            "userId":"Raj.01",
+            "password":"1002",
+            "initialAmount":1000,
+            "IsLogin":false,
+            "transactionHistory":[]
+        },{
+            "Name":"Ijay",
+            "accountNo":110003,
+            "userId":"Ijay.01",
+            "password":"1003",
+            "initialAmount":1000,
+            "IsLogin":false,
+            "transactionHistory":[]
+        }
+    ]
+}
