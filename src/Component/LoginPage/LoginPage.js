@@ -33,10 +33,14 @@ let LoginPage = () => {
   return (
     <div style={{backgroundColor:"White", width:"100%", height:"100%"}}>
       <div className="row" style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
-        <img style={{width:"40%",height:"30%",marginTop:"5%"}} src="https://th.bing.com/th/id/OIP.lCll6raXJdLpNIhLaqpVBQHaEo?rs=1&pid=ImgDetMain" alt="Logo" />
-        <h3 style={{textAlign:"center",marginTop:"10%"}}>LogIn</h3>
-        <input className="m-2" style={{width:"55%",border:"1px solid"}} value={userId} name="userId" onChange={handle}  />
-        <input className="m-2" style={{width:"55%",border:"1px solid"}} value={password} type="password" name="password" onChange={handle}  />
+        <img style={{width:"30%",height:"30%",marginTop:"3%"}} src="https://th.bing.com/th/id/OIP.lCll6raXJdLpNIhLaqpVBQHaEo?rs=1&pid=ImgDetMain" alt="Logo" />
+        <h5 style={{textAlign:"center",marginTop:"5%"}}>LogIn</h5>
+        <div className="d-flex justify-content-center">
+          <input className="m-2" style={{width:"35%",border:"1px solid"}} value={userId} name="userId" onChange={handle}  />
+        </div>
+        <div className="d-flex justify-content-center"> 
+          <input className="m-2" style={{width:"35%",border:"1px solid"}} value={password} type="password" name="password" onChange={handle}  />
+        </div>
         <p style={{color:"lightgray"}}></p>
         <button className="btn btn-primary" style={{width:"20%"}} onClick={submit}>Submit</button>
       </div>           
