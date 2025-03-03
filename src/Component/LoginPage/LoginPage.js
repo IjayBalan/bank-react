@@ -33,7 +33,7 @@ let LoginPage = () => {
   return (
     <div style={{backgroundColor:"skyblue", width:"100vw", height:"100vh"}}>
     <div className="d-flex justify-content-center align-items-center">
-      <div style={{border:"1px solid",width:"400px",height:"500px",margin:"7%",backgroundColor:"white",borderColor:"skyblue"}}>
+      <div style={{border:"1px solid",width:"400px",height:"500px",margin:"7%",backgroundColor:"white",borderColor:"skyblue",borderRadius:"10%",boxShadow:"0 4px 8px rgba(0,0,0,0.3)"}}>
         <div className="d-flex justify-content-center m-3">
           <img style={{width:"60%",height:"60%",display:"flex",justifyContent:"center",alignItems:"center"}} src="https://th.bing.com/th/id/OIP.lCll6raXJdLpNIhLaqpVBQHaEo?rs=1&pid=ImgDetMain" alt="Logo" />
         </div>
