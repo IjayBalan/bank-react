@@ -11,7 +11,8 @@ let HomePage=()=>{
     let [debitAccount,setDebitAccount]=useState()
     let [debitAmount,setDebitAmount]=useState()
     let [creditAccount,setCreditAccount]=useState()
-    let [bank,setBank]=useState()
+    let [creditBank,setCreditBank]=useState()
+    let [debitBank,setDebitBank]=useState()
     let [welcome,setWelcome]=useState("")
     useEffect(()=>{
         let obj=state.Items.find((a,b)=>{
@@ -43,8 +44,10 @@ let HomePage=()=>{
             setDebitAmount(Number(e.target.value))
         }else if(e.target.name==='creditAccount'){
             setCreditAccount(e.target.value)
-        }else if(e.target.name==='bank'){
-            setBank(e.target.value)
+        }else if(e.target.name==='creditBank'){
+            setCreditBank(e.target.value)
+        }else if(e.target.name==='debitBank'){
+            setDebitBank(e.target.value)
         }
     }
     
@@ -55,10 +58,10 @@ let HomePage=()=>{
         let newDate=dateTime.toLocaleDateString()
         let newTime=dateTime.toLocaleTimeString()
         let type="credit"
-        let dateTimeobj={newDate,newTime,creditAmount,type,creditAccount,bank,crebalance}
+        let dateTimeobj={newDate,newTime,creditAmount,type,creditAccount,creditBank,crebalance}
         setCreditAmount("")
         setCreditAccount("")
-        setBank("")
+        setCreditBank("")
         let updateCreditTransaction = updatedAmount.map((a) =>a.IsLogin? {...a,transactionHistory: [...(a.transactionHistory),dateTimeobj]}: a);
         dispatch(updateDatas(updateCreditTransaction))  
     }
@@ -70,10 +73,10 @@ let HomePage=()=>{
             let newDate=dateTime.toLocaleDateString()
             let newTime=dateTime.toLocaleTimeString()
             let type="debit"
-            let dateTimeobj={newDate,newTime,debitAmount,debitAccount,type,bank,debbalance}
+            let dateTimeobj={newDate,newTime,debitAmount,debitAccount,type,debitBank,debbalance}
             setDebitAmount("")
             setDebitAccount("")
-            setBank("")
+            setDebitBank("")
             let updateDebitTransactions= debitedAmount.map((a)=>a.IsLogin?{...a,transactionHistory:[...(a.transactionHistory),dateTimeobj]}:a)
             dispatch(updateDatas(updateDebitTransactions)) 
          }
@@ -103,8 +106,8 @@ let HomePage=()=>{
                 <div style={{backgroundColor:"skyblue",border:"1px",borderRadius:"2%",width:"60%",boxShadow:"0 4px 8px rgba(0,0,0,0.3)"}}>
                     <h3 className="mt-2" style={{textAlign:"center"}}>Credit</h3>
                     <p className="d-flex justify-content-center mt-3" style={{marginTop:"10%"}}>Add Bank</p>
-                    <input className="d-flex justify-content-center" name="bank" value={bank} onChange={handle} style={{width:"100%",borderColor:"skyblue"}}/>
-                    <p className="d-flex justify-content-center mt-3" style={{marginTop:"10%"}}>Add Account</p>
+                    <input className="d-flex justify-content-center" name="creditBank" value={creditBank} onChange={handle} style={{width:"100%",borderColor:"skyblue"}}/>
+                    <p className="d-flex justify-content-center mt-3" style={{marginTop:"10%"}}>Add AccountNumber</p>
                     <input className="d-flex justify-content-center" name="creditAccount" value={creditAccount} onChange={handle} style={{width:"100%",borderColor:"skyblue"}}/>
                     <p className="d-flex justify-content-center mt-3" style={{marginTop:"10%"}}>Add Amount</p>
                     <input className="d-flex justify-content-center" name="creditAmount" value={creditAmount} onChange={handle} style={{width:"100%",borderColor:"skyblue"}}/>
@@ -116,7 +119,7 @@ let HomePage=()=>{
                 <div className="mb-4" style={{backgroundColor:"skyblue",border:"1px",borderRadius:"2%",width:"60%",boxShadow:"0 4px 8px rgba(0,0,0,0.3)"}}>
                     <h3 className="mt-2" style={{textAlign:"center"}}>Debit</h3>
                     <p className="d-flex justify-content-center mt-3" style={{marginTop:"10%"}}>Add Bank</p>
-                    <input className="d-flex justify-content-center" name="bank" value={bank} onChange={handle} style={{width:"100%",borderColor:"skyblue"}}/>                    
+                    <input className="d-flex justify-content-center" name="debitBank" value={debitBank} onChange={handle} style={{width:"100%",borderColor:"skyblue"}}/>                    
                     <p className="d-flex justify-content-center mt-3" style={{marginTop:"10%"}}>Add AccountNumber</p>
                     <input className="d-flex justify-content-center" name="debitAccount" value={debitAccount} onChange={handle} style={{width:"100%",borderColor:"skyblue"}}/>
                     <p className="d-flex justify-content-center mt-3" style={{marginTop:"10%"}}>Add Amount</p>

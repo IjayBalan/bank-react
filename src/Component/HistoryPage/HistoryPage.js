@@ -35,7 +35,7 @@ let HistoryPage = () => {
                 return (
                     <div className="row" style={{width:"100%"}} key={b}>
                         <p className="col-3" style={{ textAlign: "center" }}>{a.newDate}</p>
-                        <p className="col-3" style={{ textAlign: "center" }}>{a.type === "credit" ? "C" : "D"} / {a.bank} / {a.type === "credit" ? a.creditAccount : a.debitAccount} / {a.newTime}</p>
+                        <p className="col-3" style={{ textAlign: "center" }}>{a.type === "credit" ? "C" : "D"} / {a.type === "credit" ? a.creditBank : a.debitBank} / {a.type === "credit" ? a.creditAccount : a.debitAccount} / {a.newTime}</p>
                         <p className="col-3" style={{ textAlign: "center" }}>{a.type === "credit" ? a.creditAmount : a.debitAmount}</p>
                         <p className="col-3" style={{ textAlign: "center" }}>{a.type === "credit" ? a.crebalance : a.debbalance}</p>
                     </div>
