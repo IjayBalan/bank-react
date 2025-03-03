@@ -34,13 +34,18 @@ let HistoryPage = () => {
             {profileDetail.transactionHistory && profileDetail.transactionHistory.map((a, b) => {
                 return (
                     <div className="row" style={{width:"100%"}} key={b}>
-                        <p className="col-3" style={{ textAlign: "center" }}>{a.newDate}</p>
-                        <p className="col-3" style={{ textAlign: "center" }}>{a.type === "credit" ? "C" : "D"} / {a.type === "credit" ? a.creditBank : a.debitBank} / {a.type === "credit" ? a.creditAccount : a.debitAccount} / {a.newTime}</p>
-                        <p className="col-3" style={{ textAlign: "center" }}>{a.type === "credit" ? a.creditAmount : a.debitAmount}</p>
-                        <p className="col-3" style={{ textAlign: "center" }}>{a.type === "credit" ? a.crebalance : a.debbalance}</p>
+                        <p className="col-3 d-flex justify-content-center">{a.newDate}</p>
+                        <p className="col-3 d-flex justify-content-center">{a.type === "credit" ? "C" : "D"} / {a.type === "credit" ? a.creditBank : a.debitBank} / {a.type === "credit" ? a.creditAccount : a.debitAccount} / {a.newTime}</p>
+                        <p className="col-3 d-flex justify-content-center">{a.type === "credit" ? a.creditAmount : a.debitAmount}</p>
+                        <p className="col-3 d-flex justify-content-center">{a.type === "credit" ? a.crebalance : a.debbalance}</p>
                     </div>
                 );
             })}
+            <div className="d-flex justify-content-center " style={{marginTop:"60%"}}>
+                <div style={{border:"1px solid",width:"50%",height:"40px",borderColor:"lightgray"}}>
+                    <p className="d-flex justify-content-center align-items-center m-1" style={{color:"gray"}}> Note: Click HomePage to go Back</p>
+                </div>
+            </div>    
         </div>
     );
 }
