@@ -25,18 +25,18 @@ let HistoryPage = () => {
                 <button className="col-4 col-md-2 col-lg-2 col-xl-1 m-4 m-md-5 m-xl-5 m-lg-5 btn btn-custom" style={{textAlign:"center",height:"10%",backgroundColor:'#FFBF00',borderColor:'#FFBF00'}} onClick={homepage} >HomePage</button>
                 </div>
             </div>
-            <div className="row">
-                <p className="col-3" style={{ textAlign: "center" }}>Date</p>
-                <p className="col-4" style={{ textAlign: "center" }}>Details</p>
-                <p className="col-2" style={{ textAlign: "center" }}>Amount</p>
-                <p className="col-3" style={{ textAlign: "center" }}>Balance</p>
+            <div className="row" style={{width:"100%"}}>
+                <p className="col-3 d-flex justify-content-center">Date</p>
+                <p className="col-3 d-flex justify-content-center" >Details</p>
+                <p className="col-3 d-flex justify-content-center" >Amount</p>
+                <p className="col-3 d-flex justify-content-center" >Balance</p>
             </div>
             {profileDetail.transactionHistory && profileDetail.transactionHistory.map((a, b) => {
                 return (
-                    <div className="row" key={b}>
+                    <div className="row" style={{width:"100%"}} key={b}>
                         <p className="col-3" style={{ textAlign: "center" }}>{a.newDate}</p>
-                        <p className="col-4" style={{ textAlign: "center" }}>{a.type === "credit" ? "C" : "D"} / {a.bank} / {a.type === "credit" ? a.creditAccount : a.debitAccount} / {a.newTime}</p>
-                        <p className="col-2" style={{ textAlign: "center" }}>{a.type === "credit" ? a.creditAmount : a.debitAmount}</p>
+                        <p className="col-3" style={{ textAlign: "center" }}>{a.type === "credit" ? "C" : "D"} / {a.bank} / {a.type === "credit" ? a.creditAccount : a.debitAccount} / {a.newTime}</p>
+                        <p className="col-3" style={{ textAlign: "center" }}>{a.type === "credit" ? a.creditAmount : a.debitAmount}</p>
                         <p className="col-3" style={{ textAlign: "center" }}>{a.type === "credit" ? a.crebalance : a.debbalance}</p>
                     </div>
                 );
