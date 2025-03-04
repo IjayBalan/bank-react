@@ -40,8 +40,8 @@ let HistoryPage = () => {
                     </div>
                 );
             })}
-            <div className="d-flex justify-content-center " style={{marginTop:"60vh"}}>
-                <div style={{border:"1px solid",width:"40vw",height:"40px",borderColor:"lightgray"}}>
+            <div className=" row d-flex justify-content-center " style={{marginTop:"60vh"}}>
+                <div className="col-8 col-md-6 col-lg-5 col-xl-4 col-xxl-3" style={{border:"1px solid",borderColor:"lightgray"}}>
                     <p className="d-flex justify-content-center align-items-center m-1" style={{color:"gray"}}> Note: Click HomePage to Go Back</p>
                 </div>
             </div>
