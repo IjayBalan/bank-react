@@ -96,10 +96,10 @@ let HomePage=()=>{
     return(
         <div>
             <div style={{backgroundColor:"skyblue",width:"100%"}}>
-                <div className="d-flex justify-content-between">
+                <div className="d-flex justify-content-between align-items-center">
                 <img className="col-5 col-md-5 col-lg-4 col-xl-4 m-2 " src="https://computergyaan.in/wp-content/uploads/2018/10/canara-bank-logo.jpg" alt="Logo" />
-                <button className="col-4 col-md-2 col-lg-2 col-xl-1 m-4 m-md-5 m-xl-5 m-lg-5 btn btn-custom" style={{textAlign:"center",height:"10%",backgroundColor:'#FFBF00',borderColor:'#FFBF00'}} onClick={history} >Transactions</button>
-                <button className=" btn btn-danger col-1 m-4 m-md-5 m-xl-5 m-lg-5 d-flex justify-content-center align-items-center" style={{height:"10%"}} onClick={logout}>Logout</button>
+                <button className="col-3 col-md-1 col-lg-1 col-xl-1 p-1 m-2 m-md-5 m-xl-5 m-lg-5 btn btn-custom" style={{textAlign:"center",height:"10%",backgroundColor:'#FFBF00',borderColor:'#FFBF00',fontSize:"10px"}} onClick={history} >Transactions</button>
+                <button className=" btn btn-danger col-2 col-md-1 col-lg-1 col-xl-1  p-1 m-md-5 m-xl-5 m-lg-5 d-flex justify-content-center align-items-center" style={{height:"5%",fontSize:"10px"}} onClick={logout}>Logout</button>
                 </div>
             </div>
             
