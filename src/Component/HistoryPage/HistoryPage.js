@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector} from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 let HistoryPage = () => {
@@ -12,7 +12,6 @@ let HistoryPage = () => {
         setProfileDetail(obj);
         console.log(obj);
     }, [state]);
-    
     let homepage = () => {
         navigate('/');
     }
@@ -41,9 +40,9 @@ let HistoryPage = () => {
                     </div>
                 );
             })}
-            <div className="d-flex justify-content-center " style={{marginTop:"60%"}}>
-                <div style={{border:"1px solid",width:"50%",height:"40px",borderColor:"lightgray"}}>
-                    <p className="d-flex justify-content-center align-items-center m-1" style={{color:"gray"}}> Note: Click HomePage to go Back</p>
+            <div className="d-flex justify-content-center " style={{marginTop:"60vh"}}>
+                <div style={{border:"1px solid",width:"40vw",height:"40px",borderColor:"lightgray"}}>
+                    <p className="d-flex justify-content-center align-items-center m-1" style={{color:"gray"}}> Note: Click HomePage to Go Back</p>
                 </div>
             </div>    
         </div>

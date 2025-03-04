@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from "react";
 import { useSelector,useDispatch } from "react-redux";
-import { updateDatas } from "../Redux/Slice";
+import { updateDatas, IsLoginUpdate} from "../Redux/Slice";
 import { useNavigate } from "react-router-dom";
 let HomePage=()=>{
     let state=useSelector((p)=>p.data)
@@ -84,7 +84,9 @@ let HomePage=()=>{
             alert("Insufficient Balance")
          }   
     }
-    
+    let logout=()=>{
+       dispatch(IsLoginUpdate(false))
+    }
     let history=()=>{
         navigate('/Transactions')
     }                                          
@@ -93,8 +95,9 @@ let HomePage=()=>{
         <div>
             <div style={{backgroundColor:"skyblue",width:"100%"}}>
                 <div className="d-flex justify-content-between">
-                <img className="col-6 col-md-5 col-lg-4 col-xl-4 m-2 " src="https://computergyaan.in/wp-content/uploads/2018/10/canara-bank-logo.jpg" alt="Logo" />
+                <img className="col-5 col-md-5 col-lg-4 col-xl-4 m-2 " src="https://computergyaan.in/wp-content/uploads/2018/10/canara-bank-logo.jpg" alt="Logo" />
                 <button className="col-4 col-md-2 col-lg-2 col-xl-1 m-4 m-md-5 m-xl-5 m-lg-5 btn btn-custom" style={{textAlign:"center",height:"10%",backgroundColor:'#FFBF00',borderColor:'#FFBF00'}} onClick={history} >Transactions</button>
+                <button className=" btn btn-danger col-1 m-4 m-md-5 m-xl-5 m-lg-5 d-flex justify-content-center align-items-center" style={{height:"10%"}} onClick={logout}>Logout</button>
                 </div>
             </div>
             
@@ -129,6 +132,14 @@ let HomePage=()=>{
                     </div>  
                 </div>
             </div>
+            <div>
+                <p></p>
+            </div>
+            <div className="d-flex justify-content-center m-2 ">
+                <div style={{border:"1px solid",width:"60%",height:"40px",borderColor:"lightgray"}}>
+                    <p className="d-flex justify-content-center align-items-center m-1" style={{color:"gray"}}> Note: Click Transactions to see the Transaction History</p>
+                </div>
+            </div> 
         </div>
     )
 }
