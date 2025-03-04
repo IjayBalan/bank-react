@@ -44,7 +44,8 @@ let HistoryPage = () => {
                 <div style={{border:"1px solid",width:"40vw",height:"40px",borderColor:"lightgray"}}>
                     <p className="d-flex justify-content-center align-items-center m-1" style={{color:"gray"}}> Note: Click HomePage to Go Back</p>
                 </div>
-            </div>    
+            </div>
+                
         </div>
     );
 }

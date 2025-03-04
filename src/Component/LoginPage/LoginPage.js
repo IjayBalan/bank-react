@@ -32,21 +32,25 @@ let LoginPage = () => {
 
   return (
     <div style={{backgroundColor:"skyblue", width:"100vw", height:"100vh"}}>
-    <div className="d-flex justify-content-center align-items-center">
-      <div style={{border:"1px solid",width:"400px",height:"500px",margin:"7%",backgroundColor:"white",borderColor:"skyblue",borderRadius:"10%",boxShadow:"0 4px 8px rgba(0,0,0,0.3)"}}>
+    <div className=" d-flex justify-content-center align-items-center">
+      <div className="container">
+      <div className="row d-flex justify-content-center align-items-center"style={{marginTop:"10vh"}}>
+      <div className="col-10 col-md-9 col-lg-8 col-xl-7" style={{border:"1px solid",backgroundColor:"white",borderColor:"skyblue",borderRadius:"10%",boxShadow:"0 4px 8px rgba(0,0,0,0.3)"}}>
         <div className="d-flex justify-content-center m-3">
           <img style={{width:"60%",height:"60%",display:"flex",justifyContent:"center",alignItems:"center"}} src="https://th.bing.com/th/id/OIP.lCll6raXJdLpNIhLaqpVBQHaEo?rs=1&pid=ImgDetMain" alt="Logo" />
         </div>
         <h5 style={{textAlign:"center"}}>LogIn</h5>
         <div className="d-flex justify-content-center">
-          <input className="m-3" style={{width:"50%",border:"1px solid"}} value={userId} name="userId" onChange={handle}  />
+          <input className="m-3" style={{width:"60%",border:"1px solid"}} value={userId} name="userId" onChange={handle}  />
         </div>
         <div className="d-flex justify-content-center"> 
-          <input className="m-2" style={{width:"50%",border:"1px solid"}} value={password} type="password" name="password" onChange={handle}  />
+          <input className="m-2" style={{width:"60%",border:"1px solid"}} value={password} type="password" name="password" onChange={handle}  />
         </div>
         <div className="d-flex justify-content-center m-3">
-          <button className="btn btn-primary" style={{width:"25%"}} onClick={submit}>Submit</button>
+          <button className="btn btn-primary" style={{width:"35%"}} onClick={submit}>Submit</button>
         </div>                    
+      </div>
+      </div>
       </div>
     </div>            
   </div>

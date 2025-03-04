@@ -104,9 +104,9 @@ let HomePage=()=>{
             </div>
             
             <div className="row d-flex justify-content-center" style={{width:"100%"}}>
-                <p className="col-12 m-2 ms-3" style={{display:"flex"}}>{welcome} <h5 className="ms-1">{profileDetail.Name}</h5></p>
-                <p className="col-12 ms-2" style={{display:"flex"}}>AccountNumber:<h5>{profileDetail.accountNo}</h5></p>
-                <p className="col-12 ms-2" style={{display:"flex"}}>Current Balance:<h5>{profileDetail.initialAmount}</h5></p>
+                <p className="col-10 mt-3 ms-5 " style={{display:"flex"}}>{welcome} <h5 className="ms-1">{profileDetail.Name}</h5></p>
+                <p className="col-10 ms-5" style={{display:"flex"}}>AccountNumber:<h5>{profileDetail.accountNo}</h5></p>
+                <p className="col-10 ms-5" style={{display:"flex"}}>Current Balance:<h5>{profileDetail.initialAmount}</h5></p>
                 <hr className="d-flex justify-content-between" style={{width:"90%"}}/>
                 <div style={{backgroundColor:"skyblue",border:"1px",borderRadius:"2%",width:"60%",boxShadow:"0 4px 8px rgba(0,0,0,0.3)"}}>
                     <h3 className="mt-2" style={{textAlign:"center"}}>Credit</h3>
@@ -137,9 +137,9 @@ let HomePage=()=>{
             <div>
                 <p></p>
             </div>
-            <div className="d-flex justify-content-center m-2 ">
-                <div style={{border:"1px solid",width:"60%",height:"40px",borderColor:"lightgray"}}>
-                    <p className="d-flex justify-content-center align-items-center m-1" style={{color:"gray"}}> Note: Click Transactions to see the Transaction History</p>
+            <div className=" row d-flex justify-content-center align-items-center m-2" >
+                <div className="col-8 col-md-8 col-lg-6 col-xl-6 col-xxl-4" style={{border:"1px solid",borderColor:"lightgray"}}>
+                <p className=" d-flex justify-content-center align-items-center m-1" style={{color:"gray"}}> Note: Click Transactions to see the Transaction History</p>
                 </div>
             </div> 
         </div>
