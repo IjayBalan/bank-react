@@ -85,7 +85,9 @@ let HomePage=()=>{
          }   
     }
     let logout=()=>{
-       dispatch(IsLoginUpdate(false))
+        let logoutPage=state.Items.map((a)=>a.IsLogin?{...a,IsLogin:false}:a)
+        dispatch(updateDatas(logoutPage))
+        dispatch(IsLoginUpdate(false))
     }
     let history=()=>{
         navigate('/Transactions')
