@@ -84,6 +84,22 @@ let HomePage=()=>{
             alert("Insufficient Balance")
          }   
     }
+    let creditfunction = () => {
+        let creditamt = state.Items.map((a) => (a.visible === false ? { ...a, visible: true } : a));
+        dispatch(updateDatas(creditamt))
+    };
+    let creditback=()=>{
+        let creditbck = state.Items.map((a)=>(a.visible===true?{...a,visible:false}:a))
+        dispatch(updateDatas(creditbck))
+    }
+    let debitfunction=()=>{
+        let debitamt = state.Items.map((a) => (a.debitvisible === false ? { ...a, debitvisible: true } : a));
+        dispatch(updateDatas(debitamt))
+    }
+    let debitback=()=>{
+        let debitbck = state.Items.map((a)=>(a.debitvisible===true?{...a,debitvisible:false}:a))
+        dispatch(updateDatas(debitbck))
+    }
     let logout=()=>{
         let logoutPage=state.Items.map((a)=>a.IsLogin?{...a,IsLogin:false}:a)
         dispatch(updateDatas(logoutPage))
@@ -107,8 +123,9 @@ let HomePage=()=>{
                 <p className="col-10 mt-3 ms-5 " style={{display:"flex"}}>{welcome} <h5 className="ms-1">{profileDetail.Name}</h5></p>
                 <p className="col-10 ms-5" style={{display:"flex"}}>AccountNumber:<h5>{profileDetail.accountNo}</h5></p>
                 <p className="col-10 ms-5" style={{display:"flex"}}>Current Balance:<h5>{profileDetail.initialAmount}</h5></p>
-                <hr className="d-flex justify-content-between" style={{width:"90%"}}/>
-                <div style={{backgroundColor:"skyblue",border:"1px",borderRadius:"2%",width:"60%",boxShadow:"0 4px 8px rgba(0,0,0,0.3)"}}>
+                
+                {profileDetail.visible?(
+                    <div className="mb-2" style={{backgroundColor:"skyblue",border:"1px",borderRadius:"2%",width:"60%",boxShadow:"0 4px 8px rgba(0,0,0,0.3)"}}>
                     <h3 className="mt-2" style={{textAlign:"center"}}>Credit</h3>
                     <p className="d-flex justify-content-center mt-3" style={{marginTop:"10%"}}>Add Bank</p>
                     <input className="d-flex justify-content-center" name="creditBank" value={creditBank} onChange={handle} style={{width:"100%",borderColor:"skyblue"}}/>
@@ -116,12 +133,14 @@ let HomePage=()=>{
                     <input className="d-flex justify-content-center" name="creditAccount" value={creditAccount} onChange={handle} style={{width:"100%",borderColor:"skyblue"}}/>
                     <p className="d-flex justify-content-center mt-3" style={{marginTop:"10%"}}>Add Amount</p>
                     <input className="d-flex justify-content-center" name="creditAmount" value={creditAmount} onChange={handle} style={{width:"100%",borderColor:"skyblue"}}/>
-                    <div className="d-flex justify-content-center mt-3">
-                        <button className="btn btn-success m-2" style={{width:"50%"}} onClick={addAmount}>Credit</button> 
+                    <div className="d-flex justify-content-between mt-3">
+                        <button className="btn btn-success m-2"  onClick={addAmount}>Credit</button> 
+                        <button className="btn btn-danger m-2"  onClick={creditback}>GoBack</button>
                     </div>  
-                </div>
-                <hr className="mt-4 d-flex justify-content-between" style={{width:"90%"}}/>
-                <div className="mb-4" style={{backgroundColor:"skyblue",border:"1px",borderRadius:"2%",width:"60%",boxShadow:"0 4px 8px rgba(0,0,0,0.3)"}}>
+                </div>):(<div className="row d-flex justify-content-center">
+                    <button className="col-5 btn btn-custom m-3" style={{backgroundColor:"rgb(168, 221, 20)",height:"10vh",boxShadow:"0 4px 8px rgba(0,0,0,0.4)"}} onClick={creditfunction}>Credit</button>
+                </div>)}
+                {profileDetail.debitvisible?(<div className="mt-4 mb-4" style={{backgroundColor:"skyblue",border:"1px",borderRadius:"2%",width:"60%",boxShadow:"0 4px 8px rgba(0,0,0,0.3)"}}>
                     <h3 className="mt-2" style={{textAlign:"center"}}>Debit</h3>
                     <p className="d-flex justify-content-center mt-3" style={{marginTop:"10%"}}>Add Bank</p>
                     <input className="d-flex justify-content-center" name="debitBank" value={debitBank} onChange={handle} style={{width:"100%",borderColor:"skyblue"}}/>                    
@@ -129,19 +148,14 @@ let HomePage=()=>{
                     <input className="d-flex justify-content-center" name="debitAccount" value={debitAccount} onChange={handle} style={{width:"100%",borderColor:"skyblue"}}/>
                     <p className="d-flex justify-content-center mt-3" style={{marginTop:"10%"}}>Add Amount</p>
                     <input className="d-flex justify-content-center" name="debitAmount" value={debitAmount} onChange={handle} style={{width:"100%",borderColor:"skyblue"}}/>
-                    <div className="d-flex justify-content-center mt-3">
-                        <button className="btn btn-success m-2" style={{width:"50%"}} onClick={sendAmount}>Debit</button> 
+                    <div className="d-flex justify-content-between mt-3">
+                        <button className="btn btn-success m-2"  onClick={sendAmount}>Debit</button> 
+                        <button className="btn btn-danger m-2"  onClick={debitback}>GoBack</button>
                     </div>  
-                </div>
+                </div>):(<div className="row d-flex justify-content-center">
+                    <button className="col-5 btn custom-gradient-btn m-3" style={{backgroundColor:"rgb(168, 221, 20)",height:"10vh",boxShadow:"0 4px 8px rgba(0,0,0,0.4)"}} onClick={debitfunction}>Debit</button>
+                </div>)}
             </div>
-            <div>
-                <p></p>
-            </div>
-            <div className=" row d-flex justify-content-center align-items-center m-2" >
-                <div className="col-8 col-md-8 col-lg-6 col-xl-6 col-xxl-4" style={{border:"1px solid",borderColor:"lightgray"}}>
-                <p className=" d-flex justify-content-center align-items-center m-1" style={{color:"gray"}}> Note: Click Transactions to see the Transaction History</p>
-                </div>
-            </div> 
         </div>
     )
 }

@@ -7,6 +7,8 @@
             "password":"1001",
             "initialAmount":1000,
             "IsLogin":false,
+            "debitvisible":false,
+            "visible":false,
             "transactionHistory":[]
         },{
             "Name":"Raj",
@@ -15,6 +17,8 @@
             "password":"1002",
             "initialAmount":1000,
             "IsLogin":false,
+            "debitvisible":false,
+            "visible":false,
             "transactionHistory":[]
         },{
             "Name":"Ijay",
@@ -23,6 +27,8 @@
             "password":"1003",
             "initialAmount":1000,
             "IsLogin":false,
+            "debitvisible":false,
+            "visible":false,
             "transactionHistory":[]
         }
     ]
